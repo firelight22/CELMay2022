@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "CELMay2022"
 include ':app'
 include ':androkado'
+include ':navigationapi'

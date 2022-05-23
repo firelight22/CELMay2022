@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/listFramgent"
+    android:id="@+id/navigation" >
+    <fragment android:id="@+id/listFramgent" android:name="com.quentinrouet.navigationapi.ListArticlesFragment"/>
+
+    <fragment android:name="com.quentinrouet.navigationapi.DetailArticleFragment"/>
+
+</navigation>

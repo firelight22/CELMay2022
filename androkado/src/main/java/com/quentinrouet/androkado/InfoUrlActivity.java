@@ -13,6 +13,8 @@ public class InfoUrlActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_url);
         Article article = getIntent().getParcelableExtra(MainActivity.KEY_ARTICLE);
         TextView textViewUrl = findViewById(R.id.textViewUrl);
-        textViewUrl.setText(article.getUrl());
+        textViewUrl.setText("mlsdfjglms");
+
+
     }
 }

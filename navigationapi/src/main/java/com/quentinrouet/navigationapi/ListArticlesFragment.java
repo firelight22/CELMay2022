@@ -49,6 +49,11 @@ public class ListArticlesFragment extends Fragment {
                 3.0f,
                 true));
         rvArticles.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        rvArticles.setAdapter(new ArticleAdapter(alArticles));
+        rvArticles.setAdapter(new ArticleAdapter(alArticles, new ArticleAdapter.OnArticleClickListener() {
+            @Override
+            public void onArticleCLicked(Article article) {
+
+            }
+        }));
     }
 }

@@ -15,9 +15,11 @@ import java.util.ArrayList;
  */
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleVH> {
    ArrayList<Article> data;
+   OnArticleClickListener listener;
 
-   public ArticleAdapter(ArrayList<Article> data) {
+   public ArticleAdapter(ArrayList<Article> data, OnArticleClickListener listener) {
       this.data = data;
+      this.listener = listener;
    }
 
    class ArticleVH extends RecyclerView.ViewHolder {
@@ -45,6 +47,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
    @Override
    public void onBindViewHolder(@NonNull ArticleVH holder, int position) {
       Article articleToShow = data.get(position);
+      holder.itemView.setOnClickListener(v -> listener.onArticleCLicked(articleToShow));
       holder.textViewTitre.setText(articleToShow.nom);
       holder.textViewPrix.setText(String.valueOf(articleToShow.prix));
    }
@@ -53,8 +56,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
    public int getItemCount() {
       return data.size();
    }
-
-
-
-
+   public interface OnArticleClickListener{
+      public void onArticleCLicked(Article article);
+   }
 }

@@ -5,6 +5,6 @@
     android:id="@+id/navigation" >
     <fragment android:id="@+id/listFramgent" android:name="com.quentinrouet.navigationapi.ListArticlesFragment"/>
 
-    <fragment android:name="com.quentinrouet.navigationapi.DetailArticleFragment"/>
+    <fragment android:id="@+id/detailFragment"  android:name="com.quentinrouet.navigationapi.DetailArticleFragment"/>
 
 </navigation>
